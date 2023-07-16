@@ -42,5 +42,3 @@ my_data_rows = my_cur.fetchall()
 
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
-
-add_my_fruit = streamlit.multiselect("What fruit would you like to add?", list(my_data_rows.index))
