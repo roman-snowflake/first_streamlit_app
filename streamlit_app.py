@@ -28,6 +28,7 @@ def get_fruitvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
+
 #New section to display fruityvice API response
 streamlit.header("Fruityvice Fruit Advice!")
 try:
@@ -40,6 +41,7 @@ try:
 
 except URLError as e:
   streamlit.error()
+
 streamlit.stop()
 
 
